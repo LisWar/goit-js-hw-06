@@ -25,5 +25,12 @@ button {
 
 .gallery{
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
+  list-style: none;
+}
+
+.gallery li img{
+  max-width: 740px;
+  object-fit:contain;
 }

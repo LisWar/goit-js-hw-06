@@ -15,7 +15,9 @@ const images = [
  
 const gallery = document.querySelector('.gallery');
 
-images.forEach(img => {
-  const galMarkup = `<img src="${img.url}" alt="${img.alt}">`;
-  gallery.insertAdjacentHTML('beforeend', galMarkup)
-});
+// console.log('images.map(`<li><img src="${img.url}" alt="${img.alt}"></li>`): ', images.map((img) => `<li><img src="${img.url}" alt="${img.alt}"></li>`));
+
+const galMarkup = images.map((img) => `<li><img src="${img.url}" alt="${img.alt}"></li>`)
+// console.log('galMarkup: ', galMarkup);
+
+gallery.insertAdjacentHTML('beforeend', galMarkup)

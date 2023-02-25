@@ -5,18 +5,14 @@ validationInput.addEventListener("blur", handleInput);
 function handleInput({target}) {
     const num = target.dataset.length;
     const len = target.value.length;
-    if (len > 0 && len < num) {
-        target.classList.remove("valid");
-        target.classList.add("invalid");
-        return;
-    }
-    if (len >= num) {
+
+    if (len == num) {
         target.classList.add("valid");
         target.classList.remove("invalid");
         return;
     }
     target.classList.remove("valid");
-    target.classList.remove("invalid");
+    target.classList.add("invalid");
     return;
 
     }
